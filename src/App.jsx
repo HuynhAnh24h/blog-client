@@ -1,9 +1,9 @@
-import React from 'react'
+import {HomePage} from "./views/pages"
 
 const App = () => {
   return (
     <div>
-      <h1 className='text-red-900'>Huỳnh Anh Deveeloper Blog</h1>
+      <HomePage/>
     </div>
   )
 }
