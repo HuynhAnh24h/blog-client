@@ -1,6 +1,6 @@
 import { IoClose } from "react-icons/io5"
 
-const MobileMenu = ({navMenus,menuHandle }) => {
+const MobileMenu = ({ navMenus, menuHandle }) => {
   console.log(menuHandle)
   return (
     <div className="w-full h-screen fixed left-0 top-0 right-0 bottom-0 z-2">
@@ -15,8 +15,8 @@ const MobileMenu = ({navMenus,menuHandle }) => {
           ))}
         </ul>
       </div>
-      <div className="absolute top-[18px] right-[18px] z-9" onClick={()=>menuHandle(false)}>
-          <IoClose style={{color: "#ffffff", fontSize:"25px", fontWeight:"bold"}} className="text-white"/>
+      <div className="absolute top-[18px] right-[18px] z-9" onClick={() => menuHandle(false)}>
+        <IoClose style={{ color: "#ffffff", fontSize: "25px", fontWeight: "bold" }} className="text-white" />
       </div>
     </div>
   );

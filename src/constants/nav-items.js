@@ -1,23 +1,43 @@
 const navItems = [
     {
         name: "Home",
-        link:"/"
+        link:"/",
+        type: "link"
     },
     {
         name: "Articles",
-        link:"/articles"
+        link:"/articles",
+        type: "link"
     },
     {
         name: "Pages",
-        link:"/pages"
+        link:"/pages",
+        type: "dropdown",
+        dropItem: [
+            {
+                subName: "Contact",
+                link: "/contact"
+            },
+            {
+                subName: "Product",
+                link:"/product"
+            },
+            {
+                subName: "Category",
+                link:"/category"
+            }
+        ]
     },
     {
         name: "Pricing",
-        link:"/pricing"
+        link:"/pricing",
+        type: "link"
     },
     {
         name: "Faq",
-        link:"/faq"
+        link:"/faq",
+        type: "link"
+
     },
 ]
 

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { navItems } from "../constants";
 import { FaBars } from "react-icons/fa";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 import MobileMenu from "./MobileMenu";
 
 const Header = () => {
@@ -16,7 +17,7 @@ const Header = () => {
     <section className="w-full flex justify-center">
       <header className="container px-4 md:container md:mx-auto flex justify-between items-center py-4">
         <div>
-          <a href="/" className="text-xl font-bold text-blue-900 ">
+          <a href="/" className=" text-lg md:text-3xl font-bold text-blue-900 ">
             <span className="uppercase">Software</span> Blog
           </a>
         </div>
@@ -24,9 +25,33 @@ const Header = () => {
           <ul className="hidden md:flex justify-between items-center gap-5">
             {navItems.map((navItem, index) => (
               <li key={index}>
-                <a href="" className="text-lg font-[400] transition-all hover:text-blue-900 text-[#183B56] cursor-pointer">
-                  {navItem.name}
-                </a>
+                {navItem.type === "link" ? (
+                  <div>
+                    <a href="" className="text-lg font-[400] transition-all hover:text-blue-900 text-[#183B56] cursor-pointer
+                   ">
+                      {navItem.name}
+
+                    </a>
+                  </div>
+                ) : (
+                  <div className="relative group">
+                    <a href="" className="text-lg font-[400] transition-all hover:text-blue-900 text-[#183B56] cursor-pointer
+                  flex items-center gap-[5px]">
+                      {navItem.name}
+                      <MdOutlineArrowDropDown />
+                    </a>
+                    <div className="hidden absolute bottom-0 right-0 transform bg-white
+                      duration-500 transition-all translate-y-full group-hover:block w-[150px] h-full">
+                      {navItem.dropItem.map((dropValue, index) => (
+                        <div key={index} className="flex flex-col bg-white">
+                          <p className="p-3 hover:text-white hover:bg-[#0D2436]">
+                            <a href={dropValue.link} className="block">{dropValue.subName}</a>
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -45,7 +70,7 @@ const Header = () => {
 
       {menuOpen && (
         <div>
-          <MobileMenu navMenus={navItems} menuHandle ={setMenuOpen}/>
+          <MobileMenu navMenus={navItems} menuHandle={setMenuOpen} />
         </div>
       )}
     </section>

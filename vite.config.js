@@ -5,4 +5,16 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
+  theme:{
+    extend:{
+      colors:{
+        primary: "#1565D8",
+        dark:{
+          light: "#5A7184",
+          hard:"#0D2436",
+          soft:"#183B56",
+        }
+      }
+    }
+  }
 })
