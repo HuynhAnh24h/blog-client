@@ -11,7 +11,7 @@ const Footer = () => {
 ];
   return (
     <div className="bg-[#0D2436]">
-        <div className="container mx-auto px-4 md:mx-auto px flex flex-wrap justify-around gap-5 md:flex-row md:justify-between items-start py-30">
+        <div className="container mx-auto px-4 md:mx-auto px flex flex-wrap justify-around gap-5 md:flex-row md:justify-between items-start py-20">
             <div className="flex-2 flex-col justify-items-start gap-3">
               <div className="mb-2">
                 <a href="/" className="text-xl font-bold text-white ">

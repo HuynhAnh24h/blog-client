@@ -21,7 +21,7 @@ const Articles = () => {
           ))}
         </div>
         <div className='flex justify-center items-center'>
-            <button className='px-5 py-2 border-2 border-blue-600 rounded text-blue-600
+            <button className='px-5 py-2 border-2 border-blue-600 rounded text-blue-600 transition-all
               font-bold text-md hover:bg-blue-600 hover:text-white hover:cursor-pointer
               md:text-md lg:text-xl
             '>Load more</button>

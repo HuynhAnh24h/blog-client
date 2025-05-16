@@ -1,12 +1,12 @@
-import React from 'react'
 import MainLayout from '../layouts/MainLayout'
-import { Articles, Hero } from '../../components'
+import { Articles, CTA, Hero } from '../../components'
 
 const HomePage = () => {
   return (
     <MainLayout>
       <Hero/>
       <Articles/>
+      <CTA/>
     </MainLayout>
   )
 }
