@@ -5,3 +5,5 @@ export {default as footerItem} from "./footer-item"
 // Home Constant
 export {default as popularTags} from "./home/popularTags"
 export {default as imageBlog} from "./home/imageBlogs" 
+
+export {default as blogData} from "./home/blogData"
