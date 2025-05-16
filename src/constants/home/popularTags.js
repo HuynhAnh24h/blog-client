@@ -13,6 +13,9 @@ const popularTags = [
     },
     {
         name: "Flutter"
+    },
+    {
+        name: "golang"
     }
 ]
 export default popularTags
