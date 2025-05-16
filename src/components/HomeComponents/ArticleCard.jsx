@@ -11,10 +11,12 @@ const ArticleCard = ({ title,
   date,
   id, }) => {
   return (
-    <div className="rounded-xl overflow-hidden shadow-xl flex flex-col gap-3 lg:max-w-md md:max-w-sm max-w-sm w-full" key={id}>
+    <div className="rounded-xl overflow-hidden shadow-xl flex flex-col gap-3 
+    lg:max-w-md md:w-[calc(50%-20px)] 
+    max-w-sm w-full" key={id}>
       <img src={blogImage} alt="Blog Image" />
       <div className="flex flex-col justify-center items-start gap-5 px-5 py-5">
-        <p className="text-xl font-bold text-[#183B56] italic">{title}</p>
+        <p className="text-xl font-bold text-[#183B56] italic md:text-lg md:font-lg">{title}</p>
         <p className="text-lg text-[#183B56]">{shortDesc}</p>
         <div className="flex justify-between items-center w-full">
           <div className="flex items-center gap-2">
@@ -31,7 +33,6 @@ const ArticleCard = ({ title,
               </div>
               )}
             </div>
-
           </div>
           <p className="text-lg font-bold text-[#183B56] italic">{date}</p>
         </div>

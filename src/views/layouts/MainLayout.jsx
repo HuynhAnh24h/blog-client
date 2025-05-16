@@ -8,9 +8,7 @@ const MainLayout = ({children}) => {
   return (
    <>
     <Header/>
-       <div className='w-full'>
-         {children}
-       </div>
+      {children}
     <Footer/>
    </>
   )
